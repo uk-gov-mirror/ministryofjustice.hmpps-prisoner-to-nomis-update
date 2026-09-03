@@ -43,16 +43,16 @@ dependencies {
   // Needs to match this version https://github.com/microsoft/ApplicationInsights-Java/blob/<version>/dependencyManagement/build.gradle.kts#L16
   // where <version> is the version of application insights pulled in by hmpps-gradle-spring-boot
   // at https://github.com/ministryofjustice/hmpps-gradle-spring-boot/blob/main/src/main/kotlin/uk/gov/justice/digital/hmpps/gradle/configmanagers/AppInsightsConfigManager.kt#L7
-  implementation("io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:2.28.1")
-  implementation("io.opentelemetry:opentelemetry-extension-kotlin:1.62.0")
+  implementation("io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:2.31.1")
+  implementation("io.opentelemetry:opentelemetry-extension-kotlin:1.65.0")
   implementation("com.google.guava:guava:33.7.1-jre")
 
-  testImplementation("uk.gov.justice.service.hmpps:hmpps-kotlin-spring-boot-starter-test:3.0.0")
+  testImplementation("uk.gov.justice.service.hmpps:hmpps-kotlin-spring-boot-starter-test:3.0.1")
   testImplementation("org.springframework.boot:spring-boot-starter-webflux-test")
-  testImplementation("io.swagger.parser.v3:swagger-parser:2.1.45") {
+  testImplementation("io.swagger.parser.v3:swagger-parser:2.1.47") {
     exclude(group = "io.swagger.core.v3")
   }
-  testImplementation("io.swagger.core.v3:swagger-core-jakarta:2.2.52")
+  testImplementation("io.swagger.core.v3:swagger-core-jakarta:2.2.54")
 
   testImplementation("org.wiremock:wiremock-standalone:3.13.2")
   testImplementation("org.testcontainers:localstack:1.21.4")
